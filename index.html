@@ -1,90 +1,223 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Justice</title>
+    <style>
+        .card:hover {
+            background: linear-gradient(180deg, #F3F3F3 0%, rgba(243, 243, 243, 0.00) 100%);
+        }
+
+
+
+        @media screen and (max-width:600px) {
+            .hiden {
+                display: none !important;
+            }
+
+            .butt {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+        }
+
+        @media screen and (max-width:600px) {
+            .bgimg {
+                width: 100% !important;
+                height: 400px;
+                padding: 0;
+
+            }
+        }
+    </style>
     <!-- font style  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&display=swap" rel="stylesheet">
-     <!-- font style  -->
+    <!-- font style  -->
 
     <!-- fabicon style  -->
     <link rel="shortcut icon" href="images/business.png" type="image/x-icon">
     <!-- fabicon style  -->
-    
+
     <!---------------------------------------bs css link---------------------------------------->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!---------------------------------------bs css link---------------------------------------->
 
-    
-  </head>
-  <body style="font-family: 'EB Garamond', serif;">
-     <!---------------------------------------header-------------------------------------------->
-        <header>
-            <!------------------------------------navbar---------------------------------------->
-            <nav class="navbar  fixed-top container-sm">
-                <div class="container-fluid  d-flex justify-content-between align-items-center">
-                  <a class="navbar-brand" href="#"><img src="images/logo2.png" alt=""></a>
-                    <ul class="  grid gap-4 d-flex  align-items-center mt-4">
-                        <a class="nav-link text-body-tertiary " href="#">Home</a>
-                        <a  class="nav-link text-body-tertiary"href="">Services ➤</a>
-                        <a class="nav-link text-body-tertiary" href="">Cases ➤</a>
-                        <a class="nav-link text-body-tertiary" href="">Blog ➤</a>
-                        <a class="nav-link text-body-tertiary" href="">Contact Us ➤</a>
-                    </ul>
 
-                  <button class="btn border border-0 "  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label=" ">
-                    <span
-                    class="text-light px-4 py-3 fs-6 text rounded-2" 
-                    style="background-color: #B68C5A;"
-                    >Free Consultation </span>
-                  </button>
+</head>
+
+<body style="font-family: 'EB Garamond', serif;">
+    <!---------------------------------------header-------------------------------------------->
+    <header style="margin-bottom: 8rem;">
+        <!------------------------------------navbar---------------------------------------->
+        <nav class="navbar  container-sm">
+            <div class="container-fluid  d-flex justify-content-between align-items-center">
+                <a class="navbar-brand" href="#"><img src="images/logo2.png" alt=""></a>
+                <ul class="gap-4 d-flex mt-4">
+                    <a class="hiden nav-link text-body-tertiary" href="#">Home</a>
+                    <a class="hiden nav-link text-body-tertiary" ref="">Services ➤</a>
+                    <a class="hiden nav-link text-body-tertiary" href="">Cases ➤</a>
+                    <a class="hiden nav-link text-body-tertiary" href="">Blog ➤</a>
+                    <a class="hiden nav-link text-body-tertiary" href="">Contact Us ➤</a>
+                </ul>
+
+                <button class="btn border border-0 butt" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label=" ">
+                    <span class="text-light px-4 py-3 fs-6 text rounded-2" style="background-color: #B68C5A;">Free
+                        Consultation </span>
+                </button>
 
 
 
-                  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><a class="navbar-brand" href="#"><img
+                                    src="images/logo2.png" alt=""></a></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                          </a>
-                          <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                              <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                      <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                      </form>
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <a class="nav-link text-body-tertiary " href="#">Home</a>
+                            <a class="nav-link text-body-tertiary" href="">Services ➤</a>
+                            <a class="nav-link text-body-tertiary" href="">Cases ➤</a>
+                            <a class="nav-link text-body-tertiary" href="">Blog ➤</a>
+                            <a class="nav-link text-body-tertiary" href="">Contact Us ➤</a>
+                        </ul>
                     </div>
-                  </div>
                 </div>
-              </nav>
+            </div>
+        </nav>
 
-            <!---------------------------------------navbar------------------------------------->
-        </header>
-     <!---------------------------------------header-------------------------------------------->
+        <!---------------------------------------navbar------------------------------------->
+
+        <!----------------------------------------banar------------------------------------->
+        <div class="container bgimg d-flex flex-column mb-3 justify-content-center  align-items-center" style="
+               background-image: url(images/banner.png);
+               width: 100%;
+               height: 500px;
+               background-size:cover;
+               background-repeat: no-repeat;
+               ">
+            <h1 class="text-white text-center display-2">We Provide Effective <br> Legal Solutions</h1>
+            <p class="text-white text-center">There are many variations of passages of Lorem Ipsum available, but the
+                majority <br> have suffered alteration in some form, by injected humour.</p>
+
+            <form class="d-flex mt-3 justify-content-start" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search your services" aria-label="Search">
+                <button class="btn border-0 text-white px-4" style="background-color: #B68C5A;"
+                    type="submit">Search</button>
+            </form>
+        </div>
+
+        <!----------------------------------------banar------------------------------------->
+
+    </header>
+    <!---------------------------------------header-------------------------------------------->
+
+    <!---------------------------------------main-------------------------------------------->
+    <main style="margin-top: 8rem; margin-bottom: 8rem;">
+    
+        <!----------------------------------section-1--------------------------------------->
+
+        <section class="container mt-5">
+            <h1 class="s1-h">
+                The Legal Practice Area
+            </h1>
+            <p class="">
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                alteration in some form, by injected humour.
+            </p>
+            <article> 
+                <article>
+                    <div class="card-group">
+                        <div class="card px-3 py-5 border-bottom  border-end border-0 rounded-0">
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <img class="w-25 pt-5" src="images/business.png" class="card-img-top" alt="...">
+                            <div class="card-body pb-4">
+                                <h5 class="card-title text-center pt-4">Business Law</h5>
+                                <p class="card-text text-center pt-3">This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.</p>
+                                <p class="card-text text-center pt-5"><a href="#"><img src="images/Frame.png" alt=""></a></p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card px-3 py-5 border-end border-bottom border-0 rounded-0">
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <img class="w-25 pt-4" src="images/criminal.png" class="card-img-top" alt="...">
+                            <div class="card-body pb-4">
+                                <h5 class="card-title text-center pt-4">Criminal Law</h5>
+                                <p class="card-text text-center pt-3">This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.</p>
+                                    <p class="card-text text-center pt-5"><a href="#"><img src="images/Frame.png" alt=""></a></p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card px-3 py-5 border-bottom border-0 rounded-0">
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <img class="w-25 pt-5" src="images/child.png" class="card-img-top" alt="...">
+                            <div class="card-body pb-4">
+                                <h5 class="card-title text-center pt-4">Child Support</h5>
+                                <p class="card-text text-center pt-3">This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.</p>
+                                    <p class="card-text text-center pt-5"><a href="#"><img src="images/Frame.png" alt=""></a></p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </article>
+                        <article>
+                        <div class="card-group">
+                            <div class="card px-3 py-5 border-end border-0 rounded-0">
+                                <div class="d-flex flex-column justify-content-center align-items-center">
+                                    <img class="w-25 pt-4" src="images/education.png" class="card-img-top" alt="...">
+                                <div class="card-body pb-4">
+                                    <h5 class="card-title text-center pt-4">Education Law</h5>
+                                    <p class="card-text text-center pt-3">This is a wider card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.</p>
+                                        <p class="card-text text-center pt-5"><a href="#"><img src="images/Frame.png" alt=""></a></p>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="card px-3 py-5 border-end border-0 rounded-0">
+                                <div class="d-flex flex-column justify-content-center align-items-center">
+                                    <img class="w-25 pt-5" src="images/divorce.png" class="card-img-top" alt="...">
+                                <div class="card-body pb-4">
+                                    <h5 class="card-title text-center pt-4">Divorce Law</h5>
+                                    <p class="card-text text-center pt-3">This is a wider card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.</p>
+                                        <p class="card-text text-center pt-5"><a href="#"><img src="images/Frame.png" alt=""></a></p>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="card px-3 py-5 border border-0 rounded-0">
+                                <div class="d-flex flex-column justify-content-center align-items-center">
+                                    <img class="w-25 pt-5" src="images/tax.png" class="card-img-top" alt="...">
+                                <div class="card-body pb-4">
+                                    <h5 class="card-title text-center pt-4">Tax Law</h5>
+                                    <p class="card-text text-center pt-3">This is a wider card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.</p>
+                                        <p class="card-text text-center pt-5"><a href="#"><img src="images/Frame.png" alt=""></a></p>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+        </article>
+        </section>
 
 
+
+        <!----------------------------------section-1--------------------------------------->
+
+    </main>
+
+    <!---------------------------------------main-------------------------------------------->
 
 
 
@@ -92,7 +225,10 @@
 
 
     <!---------------------------------------bs js script-------------------------------------->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
     <!-------------------------------------------bs js script---------------------------------->
-  </body>
+</body>
+
 </html>
